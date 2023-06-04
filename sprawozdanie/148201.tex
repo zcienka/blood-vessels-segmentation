@@ -64,26 +64,38 @@ xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
               \item OpenCV
               \item Numpy
               \item Matplotlib
+              \item Scikit image
           \end{itemize}
     \item Opis zastosowanych metod:
           \begin{enumerate}
               \item Przetwarzanie obrazów
-              \begin{enumerate}
-                \item Wstępne przetwarzanie obrazów\\
-                Podczas wstępnego przetwarzania wyodrębniany jest kanał zielony, 
-                następnie obraz jest rozmywany, a potem usuwany jest szum i przeprowadzane jest 
-                wyostrzanie obrazu.
-                \begin{figure}[h]
-                    \centering
-                    \includegraphics[width=0.6\textwidth]{../res/sample-preprocessed-image.png}
-                    \caption{Obraz po wstępnym przetwarzaniu}
-                  \end{figure}
-
-              \end{enumerate}
-
+                    \begin{enumerate}
+                        \item Wstępne przetwarzanie obrazów\\
+                              Podczas wstępnego przetwarzania wyodrębniany jest kanał zielony,
+                              następnie obraz jest rozmywany, a potem usuwany jest szum i przeprowadzane jest
+                              wyostrzanie obrazu. Następnie wykonywana jest normalizacja histogramu i
+                              wzmocnienie naczyń krwionośnych filtrem Franghiego.
+                              \begin{figure}[h]
+                                  \centering
+                                  \begin{minipage}{0.47\textwidth}
+                                      \centering
+                                      \includegraphics[width=\linewidth]{../res/sample-original-image.png}
+                                  \end{minipage}
+                                  \begin{minipage}{0.47\textwidth}
+                                      \centering
+                                      \includegraphics[width=\linewidth]{../res/sample-preprocessed-image.png}
+                                  \end{minipage}
+                                  \caption{Obraz przed i po przetwarzaniu}
+                              \end{figure}
+                    \end{enumerate}
+                    \newpage
+                    \item Uczenie maszynowe
+                    \begin{enumerate}
+                        \item W celu zrównoważenia klas w zbiorze treningowym użyto undersamplingu.
+                        \item Tworzony jest obiekt klasyfikatora RandomForestClassifier z liczbą drzew równą 900.
+                    \end{enumerate}
           \end{enumerate}
-
-
 \end{enumerate}
+
 
 \end{document}
