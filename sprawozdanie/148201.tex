@@ -22,7 +22,6 @@ top=0mm,
 bottom=0mm,
 left=3mm,
 right=0mm,
-width=\textwidth,
 boxrule=1pt,
 colback=black!85,
 listing only,
@@ -33,6 +32,7 @@ language=Python,
 keywordstyle=\color{myorange},
 stringstyle=\color{mygreen},
 commentstyle=\color{mygray}
+xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
 }
 }
 
@@ -60,7 +60,7 @@ commentstyle=\color{mygray}
 
     \item Zastosowany język programowania oraz dodatkowe biblioteki.
           \begin{itemize}
-              \item Python 3.10.10
+              \item Python
               \item OpenCV
               \item Numpy
               \item Matplotlib
@@ -70,10 +70,15 @@ commentstyle=\color{mygray}
               \item Przetwarzanie obrazów
               \begin{enumerate}
                 \item Wstępne przetwarzanie obrazów\\
-                Podczas wstępnego przetwarzania wyodrębniany jest kanał zielony,
-                \includegraphics[\]{imagefile}
+                Podczas wstępnego przetwarzania wyodrębniany jest kanał zielony, 
+                następnie obraz jest rozmywany, a potem usuwany jest szum i przeprowadzane jest 
+                wyostrzanie obrazu.
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.6\textwidth]{../res/sample-preprocessed-image.png}
+                    \caption{Obraz po wstępnym przetwarzaniu}
+                  \end{figure}
 
-                \item Usunięcie tła
               \end{enumerate}
 
           \end{enumerate}
