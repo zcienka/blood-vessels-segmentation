@@ -85,14 +85,41 @@ xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
                                       \centering
                                       \includegraphics[width=\linewidth]{../res/sample-preprocessed-image.png}
                                   \end{minipage}
-                                  \caption{Obraz przed i po przetwarzaniu}
+                                  \caption{Obraz przed i po przetworzeniu}
+                              \end{figure}
+                              \newpage
+                        \item Przetworzone obrazy siatkówki oka\\
+                              \begin{figure}[h]
+                                  \centering
+                                  \begin{minipage}{0.73\textwidth}
+                                      \centering
+                                      \includegraphics[width=0.73\linewidth]{../res/preprocessed-images.png}
+                                  \end{minipage}
+                              \end{figure}
+                              \newpage
+                        \item Zwizualizowane naczynia na oryginalnych zdjęciach\\
+                              \begin{figure}[h]
+                                  \centering
+                                  \begin{minipage}{0.73\textwidth}
+                                      \centering
+                                      \includegraphics[width=0.73\linewidth]{../res/original-images-vessels-visualizedpng.png}
+                                  \end{minipage}
                               \end{figure}
                     \end{enumerate}
+
+
                     \newpage
-                    \item Uczenie maszynowe
+              \item Uczenie maszynowe
                     \begin{enumerate}
-                        \item W celu zrównoważenia klas w zbiorze treningowym użyto undersamplingu.
-                        \item Tworzony jest obiekt klasyfikatora RandomForestClassifier z liczbą drzew równą 900.
+                        \item W celu zrównoważenia klas w zbiorze treningowym użyto undersamplingu. Tworzony
+                              jest obiekt klasyfikatora RandomForestClassifier z liczbą drzew równą 500.
+                              \begin{figure}[h]
+                                \centering
+                                \begin{minipage}{\textwidth}
+                                    \centering
+                                    \includegraphics[width=\linewidth]{../res/predicted-images.png}
+                                \end{minipage}
+                            \end{figure}
                     \end{enumerate}
           \end{enumerate}
 \end{enumerate}

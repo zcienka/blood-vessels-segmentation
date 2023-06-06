@@ -8,6 +8,9 @@ Automatically detecting blood vessels for a given retina image.
 ## Preprocessed images
 ![Preprocessed images](./res/preprocessed-images.png)
 
-![Preprocessed images](./res/separated-vessels.png)
+<!-- ![separated vessels](./res/separated-vessels.png)
+ -->
+## Manually labeled images, preprocessed images and predicted images
+ ![Predicted images](./res/predicted-images.png)
 
 
