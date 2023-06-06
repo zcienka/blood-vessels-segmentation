@@ -1,5 +1,5 @@
 # Blood vessels segmentation
-Application that automatically detects blood vessels for a given retina image.
+Automatically detecting blood vessels for a given retina image.
 
 
 ## Original images
