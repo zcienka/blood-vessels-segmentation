@@ -1,6 +1,13 @@
 # Blood vessels segmentation
 Application that automatically detects blood vessels for a given retina image.
 
-## Preprocessed image
-![Preprocessed image](./res/preprocessed-images.png)
+
+## Original images
+![Original images](./res/original-images.png)
+
+## Preprocessed images
+![Preprocessed images](./res/preprocessed-images.png)
+
+![Preprocessed images](./res/separated-vessels.png)
+
 
