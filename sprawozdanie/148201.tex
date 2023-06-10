@@ -60,7 +60,7 @@ xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
 
     \item Zastosowany język programowania oraz dodatkowe biblioteki.
           \begin{itemize}
-            
+
               \item Python
               \item OpenCV
               \item Numpy
@@ -111,19 +111,60 @@ xleftmargin=.2\textwidth, xrightmargin=.2\textwidth
 
               \item Uczenie maszynowe
                     \begin{enumerate}
+                        \item Segmenty oryginalnych obrazów siatkówki oka zostały podzielone na kwadraty o boku pięciu pikseli.
+                              Z każdego kwadratu wyodrębniono cechy, które zostały użyte do uczenia klasyfikatora takie jak momenty Hu.
                         \item W celu zrównoważenia klas w zbiorze treningowym użyto undersamplingu. Tworzony
-                              jest obiekt klasyfikatora RandomForestClassifier z liczbą drzew równą 500.\\
-                              \begin{center}
-                                  \begin{figure}[h]
-                                      \centering
-                                      \begin{minipage}{0.91\textwidth}
-                                          \centering
-                                          \includegraphics[width=0.91\linewidth]{../res/predicted-images.png}
-                                      \end{minipage}
-                                  \end{figure}
-                              \end{center}
+                              jest obiekt klasyfikatora Random Forest z liczbą drzew równą 900.\\
+
                     \end{enumerate}
+
+                    \begin{figure}[h]
+                        \centering
+                        \begin{minipage}{0.4\textwidth}
+                            \centering
+                            \includegraphics[width=\linewidth]{../train-images/01_h.jpg}
+                        \end{minipage}
+                        \begin{minipage}{0.4\textwidth}
+                            \centering
+                            \includegraphics[width=\linewidth]{../res/sample-generated-image-random-forest.png}
+                        \end{minipage}
+                        \caption{Oryginalny obraz i obraz wygenerowany}
+                    \end{figure}
+
+              \item Uczenie głębokie
+                    \begin{enumerate}
+                        \item
+                              Dane potrzebne do wytrenowania modelu są początkowo generowane
+                              podstawie istniejących obrazów przez tworzenie różnych przekształceń
+                              co pozwala na zwiększenie i zróżnicowanie danych treningowych.
+
+                        \item Jako model decyzyjny użyto model sieci neuronowej Unet.
+                    \end{enumerate}
+
+                    \begin{figure}[h]
+                        \centering
+                        \begin{minipage}{0.4\textwidth}
+                            \centering
+                            \includegraphics[width=\linewidth]{../train-images/01_h.jpg}
+                        \end{minipage}
+                        \begin{minipage}{0.4\textwidth}
+                            \centering
+                            \includegraphics[width=\linewidth]{../res/unet-generated-image.png}
+                        \end{minipage}
+                        \caption{Oryginalny obraz i obraz wygenerowany}
+                    \end{figure}
           \end{enumerate}
+          \newpage
+    \item Porównanie wyników uzyskanych przez oba modele
+          \begin{center}
+              \begin{figure}[h]
+                  \centering
+                  \begin{minipage}{0.89\textwidth}
+                      \centering
+                      \includegraphics[width=0.89\linewidth]{../res/predicted-images.png}
+                  \end{minipage}
+              \end{figure}
+          \end{center}
 \end{enumerate}
 
 
